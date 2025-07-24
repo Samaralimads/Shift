@@ -18,12 +18,12 @@ struct InspirationDetailView: View {
         ScrollViewReader { proxy in
             ScrollView {
                 VStack(alignment: .leading) {
-                    //MARK: Anchor to the top of the page for the navigation Buttons
+ //MARK: - Anchor to the top of the page for the navigation Buttons
                     Color.clear
                         .frame(height: 0)
                         .id("top")
                     
-                    //MARK: Custom back button
+ //MARK: - Custom back button
                     Button(action: { dismiss() }) {
                         Text("< Timeline")
                             .font(.custom("HelveticaNeue", size: 17))
@@ -33,7 +33,7 @@ struct InspirationDetailView: View {
                     .padding(.trailing)
                 
                     
-                    //MARK: Image
+ //MARK: - Image
                     ZStack() {
                         Circle()
                             .fill(Color("NeonGreen"))
@@ -55,7 +55,7 @@ struct InspirationDetailView: View {
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .padding(.top)
                     
-                    //MARK: Name + Field
+ //MARK: - Name + Field
                     Text(woman.name)
                         .font(.custom("Safiro-SemiBold", size: 34))
                         .foregroundColor(.white)
@@ -69,7 +69,7 @@ struct InspirationDetailView: View {
                         .frame(width: 372, height: 1)
                         .background(Color("NeonGreen"))
                     
-                    //MARK: Birth – Death - Achievement
+ //MARK: - Birth – Death - Achievement
                     HStack{
                         Image("baby")
                             .renderingMode(.template)
@@ -117,8 +117,7 @@ struct InspirationDetailView: View {
                         .foregroundColor(.clear)
                         .frame(width: 372, height: 1)
                         .background(Color("NeonGreen"))
-                    
-                    //MARK: Biography
+ //MARK: - Biography
                     Text("Biography")
                         .font(.custom("Safiro-SemiBold", size: 24))
                         .foregroundColor(.white)
@@ -129,7 +128,7 @@ struct InspirationDetailView: View {
                         .font(.custom("HelveticaNeue", size: 14))
                         .foregroundColor(.white)
                     
-                    //MARK: Why Inspiring
+ //MARK: - Why Inspiring
                     Text("Why She's Inspiring")
                         .font(.custom("Safiro-SemiBold", size: 24))
                         .foregroundColor(.white)
@@ -140,7 +139,7 @@ struct InspirationDetailView: View {
                         .font(.custom("HelveticaNeue", size: 14))
                         .foregroundColor(.white)
                     
-                    // MARK: Navigation Buttons
+                    // - MARK: Navigation Buttons
                     HStack {
                         Button(action: {
                             if currentIndex > 0 {
