@@ -13,8 +13,10 @@ struct InspirationCard: View {
     
     var body: some View {
         HStack() {
- //MARK: - Opened card
+            
             if isOpen {
+                
+                
                 ZStack() {
                     Circle()
                         .fill(Color("NeonGreen"))
@@ -34,8 +36,6 @@ struct InspirationCard: View {
                         .frame(width: 120, height: 120)
                 }
                 .frame(width: 174, height: 174)
-                .padding(.leading, 15)
-                .padding(.vertical, 15)
                 
                 VStack(alignment: .leading, spacing: 10) {
                     Text(woman.name)
@@ -60,11 +60,9 @@ struct InspirationCard: View {
                         .underline()
                     
                 }
-                .padding(.leading, 17)
-                
+                .padding(.leading, 22)
                 Spacer()
                 
- //MARK: - Closed card
             }else {
                 ZStack{
                     Circle()
@@ -80,12 +78,12 @@ struct InspirationCard: View {
                     Circle()
                         .fill(Color.white)
                         .frame(width: 30, height: 30)
+                       
+                    
+                    
                 }
-                .frame(width: 174, height: 174)
-                .padding(.leading, 15)
-                .padding(.vertical, 15)
                 
-             VStack (alignment: .leading, spacing: 10) {
+             VStack {
                  Text(woman.name)
                      .font(.custom("Safiro-SemiBold", size: 22))
                      .foregroundColor(.white)
@@ -98,11 +96,15 @@ struct InspirationCard: View {
                      .background(Color("NeonGreen"))
                      .cornerRadius(25)
                 }
-             .frame(width: 174, height: 174, alignment: .leading)
-             .padding(.horizontal, 14)
+                
             }
+            
+            
         }
-//        .background(Color.purple)
+        .padding(.vertical, 15)
+        .padding(.horizontal, 15)
+        .background(Color.pink)
+        
     }
 }
 
@@ -118,9 +120,9 @@ struct InspirationCard: View {
                     imageGreen: "ada_lovelace_g",
                     birth: "December 10, 1815, England",
                     death: "November 27, 1852, England",
-                    achievement: "First computer programer First computer programer",
-                    biography: "Ada Lovelace ",
-                    whyInspiring: "She saw a future where"
+                    achievement: "First computer programer",
+                    biography: "Ada Lovelace was a 19th-century visionary who worked on Charles Babbage’s Analytical Engine.",
+                    whyInspiring: "She saw a future where computers could create music, art, and more."
                 )
         )
         InspirationCard(
