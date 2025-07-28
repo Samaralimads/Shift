@@ -18,7 +18,3 @@ struct ShiftApp: App {
         }
     }
 }
-
-#Preview{
-    TabBarView()
-}
