@@ -7,8 +7,8 @@
 
 import Foundation
 
-class InspirationsViewModel: ObservableObject { //ObservableObject: Makes the ViewModel “watchable” by views
-    @Published var women: [Inspirations] = []   //@Published: Notifies the view when women is updated → triggers UI refresh
+class InspirationsViewModel: ObservableObject { //ObservableObject: Makes the ViewModel “watchable” by the views
+    @Published var women: [Inspirations] = []   //@Published: Tells the view when women is updated → triggers UI refresh
     
     init() {
         loadJSON()                              //Automatically loads the data when the ViewModel is created.
